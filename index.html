@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Password Generator</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(250, 218, 224);
+        }
+        h1{
+            color: #fcf8f8;
+            text-align: center;
+        }
+        .pass{
+            background-color: #fff;
+            padding: 20px;
+            margin: 40px;
+            height: 170px;
+        }
+        .box{
+            background-color: rgb(121, 34, 80);
+            height: 350px;
+            border-radius: 4px;
+        }
+        .generator{
+            display: flex;
+            justify-content: center; 
+        }
+        button{
+            margin-top: 20px;
+            margin-left: 30px;
+            height: 25px;
+            background-color: rgb(149, 30, 93);
+            border-radius: 8px;
+            color: #ffffff;
+            cursor: pointer;
+            width: 87%;
+            height: 30px;
+        }
+        .passwordLength{
+            width: 65%;
+            margin-left: 30px;
+            height: 25px;
+        }
+        .iconCopy{
+            width: 15%;
+            height: 25px;
+        }
+        .pss{
+            width: 85%;
+            margin-left: 30px;
+            height: 25px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="box">
+        <h1>Password Generator</h1>
+        <div class="pass">
+            <input type="text" class="pss" readonly>
+            <input type="range" class="passwordLength" min="8" max="16">
+            <button class="iconCopy" onclick="copyToClipboard()"><i class="bi bi-clipboard"></i></button>
+            <button onclick="generatePassword()">Generate Password</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
